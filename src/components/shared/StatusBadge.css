@@ -1,0 +1,45 @@
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.status-vacant {
+  background: rgba(74, 124, 89, 0.15);
+  color: #6fbd85;
+}
+
+.status-occupied {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--color-gold-light);
+}
+
+.status-reserved {
+  background: rgba(163, 135, 43, 0.15);
+  color: var(--color-gold-muted);
+}
+
+.status-cleaning {
+  background: rgba(163, 163, 163, 0.15);
+  color: var(--color-text-secondary);
+}
+
+.status-out {
+  background: rgba(168, 64, 47, 0.15);
+  color: #e0705c;
+}
+
+.status-paid {
+  background: rgba(74, 124, 89, 0.18);
+  color: #6fbd85;
+  border: 1px solid rgba(111, 189, 133, 0.35);
+}
+
+.status-default {
+  background: rgba(163, 163, 163, 0.15);
+  color: var(--color-text-secondary);
+}

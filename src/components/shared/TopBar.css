@@ -1,0 +1,154 @@
+.topbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-surface);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.topbar-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  font-size: 1.25rem;
+}
+
+.topbar-spacer {
+  flex: 1;
+}
+
+.topbar-install-btn {
+  background: transparent;
+  border: 1px solid var(--color-gold-muted);
+  color: var(--color-gold-light);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.85rem;
+  font-size: 0.8rem;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+.topbar-install-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topbar-user-info {
+  text-align: right;
+}
+
+.topbar-user-name {
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.topbar-user-role {
+  font-size: 0.7rem;
+  color: var(--color-gold-muted);
+}
+
+.topbar-signout {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.85rem;
+  font-size: 0.8rem;
+  transition: border-color 0.12s ease, color 0.12s ease;
+}
+
+.topbar-signout:hover {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+@media (max-width: 900px) {
+  .topbar-menu-btn {
+    display: block;
+  }
+  .topbar-install-btn span {
+    display: none;
+  }
+}
+
+
+/* ===== Mobile TopBar: hide name, keep role + install button ===== */
+@media (max-width: 600px) {
+  .topbar {
+    padding: 0 0.75rem;
+    height: 56px;
+  }
+
+  .topbar-menu-btn {
+    font-size: 1.5rem;            /* larger tap area */
+  }
+
+  /* Install button stays compact but always visible */
+  .topbar-install-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+  }
+
+  .topbar-user {
+    gap: 0.5rem;
+  }
+
+  /* Hide the full name – only show role */
+  .topbar-user-name {
+    display: none;
+  }
+
+  /* Role now becomes the main label */
+  .topbar-user-role {
+    font-size: 0.78rem;
+    color: var(--color-gold);      /* slightly more prominent */
+  }
+
+  .topbar-signout {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra tiny screens: keep only the essentials */
+@media (max-width: 400px) {
+  .topbar {
+    padding: 0 0.5rem;
+  }
+
+  .topbar-install-btn {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.7rem;
+    margin-right: 0.3rem;
+  }
+
+  .topbar-signout {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  /* Optionally reduce role size even more */
+  .topbar-user-role {
+    font-size: 0.68rem;
+  }
+
+  /* Keep iOS modal within viewport */
+  .modal-card {
+    max-width: 95vw;
+    padding: 1rem;
+    margin: 0.5rem auto;
+  }
+}

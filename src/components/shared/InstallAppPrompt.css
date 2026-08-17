@@ -1,0 +1,127 @@
+.install-banner {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  max-width: 420px;
+  margin: 0 auto;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-gold-muted);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 500;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.install-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+}
+
+.install-banner-text strong {
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+}
+
+.install-banner-text span {
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+}
+
+.install-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.install-banner-btn-primary {
+  background: var(--color-gold);
+  color: #1a1a0a;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.9rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.install-banner-btn-dismiss {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.ios-install-steps {
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* ===== Responsive additions (keep existing rules above) ===== */
+
+@media (max-width: 600px) {
+  /* Let the banner go full-width and stack its content */
+  .install-banner {
+    left: 0.5rem;
+    right: 0.5rem;
+    max-width: none;                 /* removes the 420px cap */
+    padding: 0.75rem;
+    flex-direction: column;          /* stack text above buttons */
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  /* Center the text when stacked */
+  .install-banner-text {
+    text-align: center;
+  }
+
+  /* Make the buttons group responsive */
+  .install-banner-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Let the Install button stretch and stay touch-friendly */
+  .install-banner-btn-primary {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Move the dismiss button to the top-right corner so it’s always reachable */
+  .install-banner-btn-dismiss {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+    font-size: 1.3rem;              /* larger tap target */
+    padding: 0.25rem 0.5rem;
+    background: var(--color-bg-surface);
+    border-radius: 50%;
+    line-height: 1;
+  }
+
+  /* Modal adjustments for the iOS instructions */
+  .modal-card {
+    max-width: 95vw;                 /* don't hit screen edges */
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  /* Slightly smaller font in the install steps */
+  .ios-install-steps {
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+}

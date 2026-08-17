@@ -1,0 +1,24 @@
+.countdown-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.countdown-normal {
+  background: rgba(163, 163, 163, 0.15);
+  color: var(--color-text-secondary);
+}
+
+.countdown-warning {
+  background: rgba(212, 175, 55, 0.18);
+  color: var(--color-gold-light);
+}
+
+.countdown-overdue {
+  background: rgba(168, 64, 47, 0.2);
+  color: #e0705c;
+}

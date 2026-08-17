@@ -1,0 +1,84 @@
+.date-range-filter {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.35rem;
+  width: fit-content;
+}
+
+.date-range-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.date-range-btn:hover {
+  color: var(--color-text-primary);
+}
+
+.date-range-btn-active {
+  background: var(--color-gold);
+  color: #1a1a0a;
+}
+
+.custom-range-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.85rem;
+}
+
+.custom-range-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+}
+
+.custom-range-row input {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.7rem;
+  color: var(--color-text-primary);
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.custom-range-row input:focus {
+  border-color: var(--color-gold);
+}
+
+/* ===== Responsive additions (keep existing rules above) ===== */
+
+@media (max-width: 600px) {
+  /* Allow preset buttons to wrap onto multiple lines */
+  .date-range-filter {
+    flex-wrap: wrap;
+    width: 100%;               /* Let the container fill available space */
+    justify-content: flex-start;
+  }
+
+  /* Slightly smaller buttons on small screens */
+  .date-range-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.78rem;
+  }
+
+  /* Stack custom date inputs vertically instead of side-by-side */
+  .custom-range-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* Ensure labels (and their inputs) take full width */
+  .custom-range-row label {
+    width: 100%;
+  }
+}
