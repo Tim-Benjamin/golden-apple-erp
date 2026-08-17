@@ -1,0 +1,131 @@
+.page-title {
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
+}
+
+.page-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.25rem;
+}
+
+.stat-card-label {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-card-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-gold);
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.25rem;
+}
+
+.chart-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.25rem 0.75rem;
+}
+
+.chart-card-title {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.dashboard-note {
+  margin-top: 1.75rem;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.chart-empty-note {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.stat-card-subtitle {
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  margin-top: 0.35rem;
+}
+
+/* ===== Responsive additions (keep existing rules above) ===== */
+
+/* Phones: force single-column cards, full-width charts */
+@media (max-width: 600px) {
+  .stat-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-card-value {
+    font-size: 1.3rem;
+  }
+
+  .page-title {
+    font-size: 1.25rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dashboard-note {
+    font-size: 0.75rem;
+  }
+}
+
+/* Tablets: allow two stat cards per row; charts can also fit two per row */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .stat-grid {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+
+  .chart-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+/* Large desktop: keep original, but you could tighten chart grid slightly */
+@media (min-width: 1400px) {
+  .chart-grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+}

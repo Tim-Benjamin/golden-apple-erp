@@ -1,0 +1,44 @@
+.account-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+/* ===== Responsive additions (don't remove existing rules) ===== */
+
+/* Stack the detail grid on narrow viewports */
+@media (max-width: 600px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Let password form take full width */
+  .modal-form {
+    max-width: 100% !important;
+  }
+
+  /* Make buttons full-width for easy tapping */
+  .modal-btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Reduce card padding on very small screens */
+  .account-card {
+    padding: 1rem;
+  }
+
+  /* Slightly smaller heading on phones */
+  .page-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* Medium devices (tablets) – keep grid usable */
+@media (min-width: 601px) and (max-width: 900px) {
+  .detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

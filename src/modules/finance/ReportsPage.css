@@ -1,0 +1,51 @@
+.hk-section-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gold-muted);
+  margin-bottom: 0.85rem;
+}
+
+.stat-card-change {
+  font-size: 0.72rem;
+  margin-top: 0.4rem;
+  font-weight: 500;
+}
+
+.top-performers-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.print-only-title,
+.print-only-subtitle {
+  display: none;
+}
+
+@media print {
+  .print-only-title {
+    display: block;
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 0.25rem;
+  }
+  .print-only-subtitle {
+    display: block;
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+  .stat-card,
+  .chart-card {
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+    color: #000 !important;
+    break-inside: avoid;
+  }
+  .stat-card-label,
+  .chart-card-title {
+    color: #555 !important;
+  }
+}
