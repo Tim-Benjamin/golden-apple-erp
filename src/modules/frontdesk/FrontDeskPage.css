@@ -1,0 +1,13 @@
+.table-action-btn {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-gold-muted);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.85rem;
+  font-size: 0.78rem;
+}
+
+.table-action-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}

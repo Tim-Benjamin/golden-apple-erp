@@ -1,0 +1,149 @@
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.detail-value {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+  margin-top: 0.2rem;
+  text-transform: capitalize;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.detail-section {
+  margin-bottom: 1.5rem;
+}
+
+.detail-section h3 {
+  font-size: 0.82rem;
+  color: var(--color-gold-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6rem;
+}
+
+.detail-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.detail-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+}
+
+.detail-list-amount {
+  color: var(--color-gold);
+  font-weight: 500;
+}
+
+.detail-list-date {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  margin-left: auto;
+  margin-right: 0.75rem;
+  white-space: nowrap;
+}
+
+.detail-list-empty {
+  color: var(--color-text-muted);
+  font-style: italic;
+  background: transparent !important;
+  padding: 0.2rem 0.6rem !important;
+}
+
+.inline-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.inline-form select,
+.inline-form input {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.65rem;
+  color: var(--color-text-primary);
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.inline-form input[type="text"] {
+  flex: 1;
+  min-width: 120px;
+}
+
+.inline-form button {
+  background: var(--color-green);
+  color: var(--color-gold-light);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.detail-summary {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+}
+
+.detail-summary > div {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-secondary);
+}
+
+.balance-due span:last-child {
+  color: var(--color-danger);
+  font-weight: 600;
+}
+
+.balance-clear span:last-child {
+  color: var(--color-success);
+  font-weight: 600;
+}
+
+.pending-notice {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--color-gold-light);
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  margin-bottom: 1.25rem;
+}

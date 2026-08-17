@@ -1,0 +1,38 @@
+.hk-assign-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.hk-assign-label-text {
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.hk-assign-select {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  padding: 0.45rem 0.55rem;
+  font-size: 0.8rem;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.12s ease;
+}
+
+.hk-assign-select:hover {
+  border-color: var(--color-gold-muted);
+}
+
+.hk-assign-select:focus {
+  border-color: var(--color-gold);
+}
+
+.hk-assigned-label {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  padding: 0.45rem 0;
+}

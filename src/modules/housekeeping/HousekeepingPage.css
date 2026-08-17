@@ -1,0 +1,110 @@
+.hk-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  margin: 1.25rem 0 1.75rem;
+}
+
+.hk-tab {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.hk-tab:hover {
+  color: var(--color-text-primary);
+}
+
+.hk-tab-active {
+  color: var(--color-gold);
+  border-bottom-color: var(--color-gold);
+}
+
+.hk-section {
+  margin-bottom: 2rem;
+}
+
+.hk-section-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gold-muted);
+  margin-bottom: 0.85rem;
+}
+
+.hk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.hk-room-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hk-priority {
+  border-color: var(--color-gold-muted);
+}
+
+.hk-room-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hk-room-number {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.hk-room-meta {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.hk-empty {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  grid-column: 1 / -1;
+}
+
+.hk-type-badge {
+  display: inline-flex;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.hk-type-duty {
+  background: rgba(163, 135, 43, 0.15);
+  color: var(--color-gold-muted);
+}
+
+.hk-type-cleaning {
+  background: rgba(74, 124, 89, 0.15);
+  color: #6fbd85;
+}
+
+.hk-timing-good {
+  color: #6fbd85;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.hk-timing-late {
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+}

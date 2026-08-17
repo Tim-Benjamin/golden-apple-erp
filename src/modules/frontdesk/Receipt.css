@@ -1,0 +1,86 @@
+.receipt-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+
+.receipt-toolbar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.receipt-paper {
+  background: #ffffff;
+  color: #111111;
+  width: 320px;
+  padding: 1.5rem 1.25rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.receipt-header h2 {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+.receipt-divider {
+  text-align: center;
+  font-size: 0.7rem;
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.receipt-section-title {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.15rem 0;
+}
+
+.receipt-total {
+  font-weight: bold;
+}
+
+.receipt-footer {
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+.receipt-footer-small {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+/* Print-specific: hide everything except the receipt paper */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .receipt-overlay {
+    position: static;
+    background: none;
+    padding: 0;
+  }
+  .receipt-paper {
+    box-shadow: none;
+    width: 100%;
+  }
+}
