@@ -1,0 +1,7 @@
+.hk-section-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gold-muted);
+  margin-bottom: 0.85rem;
+}
