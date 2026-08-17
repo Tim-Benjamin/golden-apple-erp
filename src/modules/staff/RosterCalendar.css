@@ -1,0 +1,6 @@
+@import '../housekeeping/DutyScheduleCalendar.css';
+
+.roster-chip-unavailable {
+  background: rgba(168, 64, 47, 0.2);
+  color: #e0705c;
+}

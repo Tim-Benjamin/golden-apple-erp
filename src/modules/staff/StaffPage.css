@@ -1,0 +1,32 @@
+.staff-role-select {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+  outline: none;
+}
+
+.staff-role-select:focus {
+  border-color: var(--color-gold);
+}
+
+.staff-status-active {
+  color: var(--color-success);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.staff-status-inactive {
+  color: var(--color-danger);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.staff-credentials-box {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+}
